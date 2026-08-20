@@ -1,0 +1,16 @@
+/* Projects Page Styles */
+.projects-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.empty-projects {
+  text-align: center;
+  padding: 60px;
+  color: var(--secondary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}

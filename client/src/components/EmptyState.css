@@ -1,0 +1,19 @@
+/* EmptyState Styles */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.empty-message {
+  color: var(--secondary);
+  font-size: 1.1rem;
+}

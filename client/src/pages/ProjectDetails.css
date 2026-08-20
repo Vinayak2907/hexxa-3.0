@@ -1,0 +1,29 @@
+/* ProjectDetails Page Styles */
+.project-details {
+  animation: fadeIn 0.3s ease;
+}
+
+.project-header {
+  margin-bottom: 30px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+.project-meta p {
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.project-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.project-tasks h3 {
+  margin-bottom: 15px;
+}

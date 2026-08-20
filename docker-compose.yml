@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # Backend API Server
+  backend:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@db:5432/hexa
+      - JWT_SECRET=your-super-secret-jwt-key-change-in-production
+      - JWT_REFRESH_SECRET=your-super-secret-refresh-key-change-in-production
+      - REDIS_URL=redis://redis:6379
+      - CLIENT_URL=http://localhost:5173
+    volumes:
+      - ./server:/app/server
+      - ./prisma:/app/prisma
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
+  # Frontend Development Server
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+      - VITE_API_URL=http://localhost:5000/api
+    volumes:
+      - ./client:/app/client
+      - /app/node_modules
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=hexa
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/seed.sql:ro
+    restart: unless-stopped
+
+  # Redis for Caching
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # WebSocket Server (separate service for real-time features)
+  websocket:
+    build: .
+    ports:
+      - "6001:6001"
+    environment:
+      - NODE_ENV=development
+      - REDIS_URL=redis://redis:6379
+      - WS_PORT=6001
+    volumes:
+      - ./server:/app/server
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  # Worker for Scheduled Jobs/Cron
+  worker:
+    build: .
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@db:5432/hexa
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ./server:/app/server
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+    # This would run scheduled jobs - we'd override the command in practice
+    command: ["node", "server/src/worker.js"]
+
+volumes:
+  postgres_data:
+  redis_data:

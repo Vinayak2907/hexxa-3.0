@@ -1,0 +1,30 @@
+/* PageContainer Styles */
+.page-container {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: var(--dark);
+}
+
+.page-subtitle {
+  color: var(--secondary);
+  font-size: 1.1rem;
+}
+
+.page-content {
+  background: white;
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}

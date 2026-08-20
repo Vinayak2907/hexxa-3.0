@@ -1,0 +1,72 @@
+/* Concepts Page Styles */
+.concepts-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.concepts-page .intro {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-bottom: 30px;
+}
+
+.concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.concept-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.concept-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.concept-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.concept-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.concept-header h3 {
+  margin: 0;
+  color: var(--dark);
+}
+
+.concept-description {
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.concept-details {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.concept-details p {
+  margin-bottom: 5px;
+}
+
+.concept-details strong {
+  color: var(--dark);
+}

@@ -1,0 +1,12 @@
+/* CreateTask Page Styles */
+.create-task {
+  animation: fadeIn 0.3s ease;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}

@@ -1,0 +1,196 @@
+.nosql-demo-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.demo-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.demo-tabs button {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  bottom: -1px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.demo-tabs button:hover {
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.demo-tabs button.active {
+  color: #1976d2;
+  border-bottom: 2px solid #1976d2;
+  background-color: white;
+  font-weight: 500;
+}
+
+.tab-content {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.concept-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.concept-box h2,
+.concept-box h3,
+.concept-box h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.concept-box h2 {
+  border-bottom: 2px solid #e3f2fd;
+  padding-bottom: 12px;
+}
+
+.concept-box h3 {
+  border-left: 4px solid #1976d2;
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+
+.code-title {
+  font-weight: 600;
+  color: #555;
+  margin: 16px 0 8px;
+  display: block;
+  font-size: 14px;
+}
+
+.code-block {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.code-block.result {
+  background-color: #e8f5e8;
+  border-left: 4px solid #4caf50;
+}
+
+.benefits-tradeoffs {
+  display: flex;
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.benefits,
+.tradeoffs {
+  flex: 1;
+}
+
+.benefits h4,
+.tradeoffs h4 {
+  color: #2e7d32;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.tradeoffs h4 {
+  color: #c62828;
+}
+
+.benefits ul,
+.tradeoffs ul {
+  padding-left: 20px;
+}
+
+.benefits li,
+.tradeoffs li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.use-cases {
+  margin: 20px 0;
+}
+
+.use-cases h4 {
+  color: #1976d2;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.use-cases ul {
+  padding-left: 20px;
+}
+
+.use-cases li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.pipeline-example {
+  margin: 24px 0;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #ff9800;
+}
+
+.pipeline-example h4 {
+  margin-top: 0;
+  color: #ef6c00;
+}
+
+.pipeline-stages h5 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.pipeline-stages ol {
+  padding-left: 20px;
+}
+
+.pipeline-stages li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .nosql-demo-page {
+    padding: 15px;
+  }
+
+  .demo-tabs {
+    flex-wrap: wrap;
+  }
+
+  .demo-tabs button {
+    padding: 10px 16px;
+    margin-bottom: 8px;
+  }
+
+  .benefits-tradeoffs {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .concept-box {
+    padding: 16px;
+  }
+}

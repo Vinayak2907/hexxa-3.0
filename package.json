@@ -1,0 +1,27 @@
+{
+  "name": "hexa",
+  "version": "1.0.0",
+  "description": "Hexa — A Full-Stack Engineering Learning & Task Platform",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server",
+    "test": "npm run test --prefix server"
+  },
+  "keywords": [
+    "fullstack",
+    "react",
+    "nodejs",
+    "postgresql",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

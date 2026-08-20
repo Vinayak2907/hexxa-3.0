@@ -1,0 +1,140 @@
+.payment-demo-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.concept-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.concept-box h2,
+.concept-box h3,
+.concept-box h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.concept-box h2 {
+  border-bottom: 2px solid #e3f2fd;
+  padding-bottom: 12px;
+}
+
+.concept-box h3 {
+  border-left: 4px solid #1976d2;
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+
+.demo-controls {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.payment-intent-info,
+.payment-result,
+.refund-result {
+  background-color: #e8f5e8;
+  border-left: 4px solid #4caf50;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.refund-result {
+  background-color: #fff3e0;
+  border-left-color: #ff9800;
+}
+
+.error-message {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.error-message h4 {
+  color: #c62828;
+  margin-top: 0;
+}
+
+.error-message p {
+  margin: 8px 0 0 0;
+  color: #d32f2f;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #1976d2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+}
+
+.btn-success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #43a047;
+}
+
+.btn-warning {
+  background-color: #ff9800;
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #fb8c00;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .payment-demo-page {
+    padding: 15px;
+  }
+
+  .concept-box {
+    padding: 16px;
+  }
+
+  .demo-controls {
+    padding: 16px;
+  }
+}

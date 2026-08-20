@@ -1,0 +1,39 @@
+/* Tasks Page Styles */
+.tasks-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.tasks-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-weight: 500;
+}
+
+.filter-group select {
+  width: auto;
+}
+
+.create-button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.create-button:hover {
+  background-color: var(--primary-hover);
+  text-decoration: none;
+}

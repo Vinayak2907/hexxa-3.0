@@ -1,0 +1,64 @@
+.ssr-demo-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.concept-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.concept-box h2,
+.concept-box h3,
+.concept-box h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.concept-box h2 {
+  border-bottom: 2px solid #e3f2fd;
+  padding-bottom: 12px;
+}
+
+.concept-box h3 {
+  border-left: 4px solid #1976d2;
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+
+.benefits-list ul {
+  padding-left: 20px;
+}
+
+.benefits-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.demo-note {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 0 4px 4px 0;
+}
+
+.demo-note p {
+  margin: 0;
+  color: #e65100;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .ssr-demo-page {
+    padding: 15px;
+  }
+
+  .concept-box {
+    padding: 16px;
+  }
+}
