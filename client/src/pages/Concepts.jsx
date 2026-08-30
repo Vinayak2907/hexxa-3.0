@@ -157,107 +157,27 @@ const bonusConcepts = [
   },
   {
     id: 19,
-    name: 'Role-based authorization checks',
-    description: 'Enforces permission barriers based on user roles (Auth & Security)',
-    implementation: 'Role validation middleware',
-    demo: 'Role-based authorization simulation',
-    file: 'Implementation notes'
+    name: 'Role-Based Authorization Checks (RBAC)',
+    description: 'Cryptographically signed JWT role verification with user, manager, and admin hierarchies',
+    implementation: 'server/src/middleware/roleMiddleware.js, server/src/routes/rbacRoutes.js',
+    demo: 'API endpoints: GET /api/rbac/info, GET /api/rbac/demo-tokens, GET /api/rbac/admin-zone',
+    file: 'docs/concepts/21-rbac.md'
   },
   {
     id: 20,
-    name: 'Streaming responses',
-    description: 'Real-time token-by-token output (AI App Eng)',
-    implementation: 'SSE Streaming integration',
-    demo: 'Streaming simulation',
-    file: 'Implementation notes'
+    name: 'Problem Modeling (Domain-Driven Design)',
+    description: 'DDD Architecture: Value Objects (DateRange), Entities (TaskEntity), State Machines, and Invariants',
+    implementation: 'server/src/services/problemModeling.js, server/src/routes/problemModelingRoutes.js',
+    demo: 'API endpoints: GET /api/problem-modeling/overview, POST /api/problem-modeling/simulate-lifecycle',
+    file: 'docs/concepts/34-problem-modeling.md'
   },
   {
     id: 21,
-    name: 'Function calling / tool use',
-    description: 'LLM executing local external tools (AI App Eng)',
-    implementation: 'Tool registry and loop',
-    demo: 'Function execution simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 22,
-    name: 'RAG — embeddings & vector retrieval',
-    description: 'Retrieval-Augmented Generation using embeddings (AI App Eng)',
-    implementation: 'Vector store implementation',
-    demo: 'RAG search simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 23,
-    name: 'LLM eval sets',
-    description: 'Evaluation framework for LLM outputs (AI App Eng)',
-    implementation: 'Heuristic eval runner',
-    demo: 'Eval execution',
-    file: 'Implementation notes'
-  },
-  {
-    id: 24,
-    name: 'Prompt injection awareness & defenses',
-    description: 'Detecting and mitigating prompt attacks (AI App Eng)',
-    implementation: 'Input sanitization & pattern matching',
-    demo: 'Injection defense simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 25,
-    name: 'Token & cost monitoring',
-    description: 'Tracking LLM token usage and budget limits (AI App Eng)',
-    implementation: 'Token tracking service',
-    demo: 'Cost monitoring simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 26,
-    name: 'Multi-step agent',
-    description: 'Autonomous agent using the ReAct loop pattern (AI App Eng)',
-    implementation: 'ReAct Loop orchestration',
-    demo: 'Agent reasoning simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 27,
-    name: 'Structured outputs',
-    description: 'Forcing strict JSON schema conformance from LLMs (AI App Eng)',
-    implementation: 'Schema validation logic',
-    demo: 'Structured extraction simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 28,
-    name: 'Problem modeling',
-    description: 'Domain-Driven Design (DDD) with value objects and entities (Backend & System Design)',
-    implementation: 'Domain modeling implementation',
-    demo: 'State machine simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 29,
-    name: 'Server-side error handling',
-    description: 'Centralized and robust server-side error handling (Backend & System Design)',
-    implementation: 'Error handler middleware',
-    demo: 'Error generation simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 30,
-    name: 'LLM API integration',
-    description: 'Integration layer for interacting with LLM APIs (AI App Eng)',
-    implementation: 'Unified LLM client',
-    demo: 'LLM interaction simulation',
-    file: 'Implementation notes'
-  },
-  {
-    id: 31,
-    name: 'Prompt engineering',
-    description: 'Zero-shot, few-shot, and CoT prompt patterns (AI App Eng)',
-    implementation: 'Prompt template engine',
-    demo: 'Prompt execution simulation',
-    file: 'Implementation notes'
+    name: 'AI Engineering & LLM Integration',
+    description: '10 AI Concepts: Streaming (SSE), Structured Outputs, Function Calling, RAG, Eval Sets, Prompt Injection Defenses, Token Monitoring, and ReAct Agents',
+    implementation: 'server/src/ai/*.js, server/src/routes/aiRoutes.js',
+    demo: 'API endpoints under /api/ai/ (status, chat, prompts, structured, stream, tools, rag, evals, guard, usage, agent)',
+    file: 'docs/concepts/24-streaming-responses.md'
   }
 ];
 

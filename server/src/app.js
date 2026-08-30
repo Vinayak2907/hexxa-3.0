@@ -10,6 +10,12 @@ import taskRoutes from './routes/taskRoutes.js';
 import projectRoutes from './routes/projectRoutes.js';
 import paymentRoutes from './routes/paymentRoutes.js';
 import nosqlRoutes from './routes/nosqlRoutes.js';
+import uploadRoutes from './routes/uploadRoutes.js';
+import oauthRoutes from './routes/oauthRoutes.js';
+import mongoIndexRoutes from './routes/mongoIndexRoutes.js';
+import aiRoutes from './routes/aiRoutes.js';
+import rbacRoutes from './routes/rbacRoutes.js';
+import problemModelingRoutes from './routes/problemModelingRoutes.js';
 import sanitizeMiddleware from './middleware/sanitizeInput.js';
 import errorHandler from './middleware/errorHandler.js';
 import notFound from './middleware/notFound.js';
@@ -54,6 +60,12 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/payment', paymentRoutes);
 app.use('/api/nosql', nosqlRoutes);
+app.use('/api/uploads', uploadRoutes);
+app.use('/api/auth/oauth', oauthRoutes);
+app.use('/api/nosql/indexes', mongoIndexRoutes);
+app.use('/api/ai', aiRoutes);
+app.use('/api/rbac', rbacRoutes);
+app.use('/api/problem-modeling', problemModelingRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
